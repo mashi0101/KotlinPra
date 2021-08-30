@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode,resultCode,data)
 
         data?.extras?.let{
-            if(requestCode ==1 && requestCode == Activity.RESULT_OK){
+            if(requestCode ==1 && resultCode == Activity.RESULT_OK){
                 findViewById<TextView>(R.id.meal).text=
-                    "飲料：${it.getString("drink")}\n\n"
-                    "甜度：${it.getString("sweet")}\n\n"
+                    "飲料：${it.getString("input_drink")}\n\n"+
+                    "甜度：${it.getString("sweet")}\n\n"+
                     "冰塊：${it.getString("ice")}"
             }
         }

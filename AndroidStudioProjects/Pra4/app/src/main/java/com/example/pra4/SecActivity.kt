@@ -23,7 +23,7 @@ class SecActivity : AppCompatActivity() {
                 val bundle = Bundle()
                 bundle.putString("input_drink",input_drink.text.toString())
                 bundle.putString("sweet",sweet.findViewById<RadioButton>(sweet.checkedRadioButtonId).text.toString())
-                bundle.putString("ice",sweet.findViewById<RadioButton>(ice.checkedRadioButtonId).text.toString())
+                bundle.putString("ice",ice.findViewById<RadioButton>(ice.checkedRadioButtonId).text.toString())
 
                 setResult(Activity.RESULT_OK, Intent().putExtras(bundle))
                 finish()
