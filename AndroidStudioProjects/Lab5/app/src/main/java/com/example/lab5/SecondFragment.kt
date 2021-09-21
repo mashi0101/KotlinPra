@@ -9,56 +9,58 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 
-class FirstFragment : Fragment(){
+class SecondFragment : Fragment(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.e("FirstFragment","onCreate")
+        Log.e("SecondFragment","onCreate")
+        findViewById<Button>(R.id.btn).setOnClickListener{
+            val intent = Intent(this, CallByMain::class.java)
+            startActivity(intent)
+        }
     }
 
-
-    //在onCreateView中定義FirstFragment的畫面為fragement_first
+    //在onCreateView中定義SecondFragment的畫面為fragement_second
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        Log.e("FirstFragment","onCreateView")
-        return inflater.inflate(R.layout.fragment_first,container,false)
+        Log.e("SecondFragment","onCreateView")
+        return inflater.inflate(R.layout.fragment_second,container,false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        Log.e("FirstFragment","onActivityCreated")
+        Log.e("SecondFragment","onActivityCreated")
     }
     override fun onStart() {
         super.onStart()
-        Log.e("FirstFragment","onStart")
+        Log.e("SecondFragment","onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e("FirstFragment","onResume")
+        Log.e("SecondFragment","onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.e("FirstFragment","onPause")
+        Log.e("SecondFragment","onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.e("FirstFragment","onStop")
+        Log.e("SecondFragment","onStop")
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.e("FirstFragment","onDestroyView")
+        Log.e("SecondFragment","onDestroyView")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e("FirstFragment","onDestroy")
+        Log.e("SecondFragment","onDestroy")
     }
 
     override fun onDetach() {
         super.onDetach()
-        Log.e("FirstFragment","onDetach")
+        Log.e("SecondFragment","onDetach")
     }
-
 }
